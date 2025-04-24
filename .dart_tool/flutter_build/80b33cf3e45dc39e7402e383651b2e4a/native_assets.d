@@ -1,1 +1,0 @@
- D:\\video_player-2.8.4\\example\\.dart_tool\\flutter_build\\80b33cf3e45dc39e7402e383651b2e4a\\native_assets.yaml: 
