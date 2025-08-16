@@ -28,7 +28,7 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.10.0' # Uses Dart 3.0.0
+          flutter-version: '3.13.0' # Uses Dart 3.0.0
           channel: 'stable'
 
       # Step 4: Cache Flutter dependencies
@@ -41,13 +41,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-flutter-
 
-      # Step 5: Modify pubspec.yaml to fix video_player_example
-      - name: Update pubspec.yaml
-        run: |
-          sed -i 's/video_player_example:.*$/video_player: ^2.4.0/' pubspec.yaml || true
-          # If video_player_example is not needed, remove it
-          sed -i '/video_player_example:/d' pubspec.yaml || true
-        # This step assumes video_player_example is the issue; adjust based on actual pubspec.yaml
+
 
       # Step 6: Install dependencies
       - name: Install dependencies
